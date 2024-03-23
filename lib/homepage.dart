@@ -10,7 +10,9 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Top Album'),
+        backgroundColor: Colors.grey,
       ),
+      backgroundColor: Colors.blueGrey[50],
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
@@ -34,7 +36,6 @@ class Home extends StatelessWidget {
                 children: <Widget>[
                   Image.network(
                     topAlbumList[index].imageUrls,
-                    height: 500,
                     width: double.infinity,
                     fit: BoxFit.cover,
                   ),

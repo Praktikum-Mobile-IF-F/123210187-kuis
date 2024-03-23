@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kuispemrogramanmobile187/homepage.dart';
 
 class Login extends StatelessWidget {
-  const Login({super.key});
+  const Login({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,9 @@ class Login extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),
+        backgroundColor: Colors.grey,
       ),
+      backgroundColor: Colors.blueGrey[50],
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -55,6 +57,10 @@ class Login extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const Home()),
                   );
                 },
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.grey),
+                  elevation: MaterialStateProperty.all<double>(5),
+                ),
                 child: const Text('Login'),
               ),
             ],
